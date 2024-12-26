@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LogoIpsum Dashboard</title>  
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon"> 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css"> 
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function () {
+   
+    
+        // mobile menu js
+        const menuIcon = document.getElementById('menu-icon');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuIcon.addEventListener('click', () => {
+            mobileMenu.classList.add('menu-active');
+            mobileMenu.classList.remove('hidden');
+            
+            hamburgerIcon.classList.add('hidden');
+            closeIcon.classList.remove('hidden');
+        });
+
+        closeIcon.addEventListener('click', () => {
+            mobileMenu.classList.remove('menu-active');
+            mobileMenu.classList.add('hidden');
+            
+            hamburgerIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+        });
+
+
+    });
+  
+    </script>
+</head>
+<body>  
+  
+    <section class="overflow-hidden bg-lightBlue">
+        <div class="dashboard-main flex w-full">
+            <div class="h-full lg:flex hidden sidebar w-full lg:w-[15.5rem] 2xl:w-[17.5rem] relative">
+                <!-- Sidebar -->
+                <aside class="lg:flex flex-col hidden bg-white h-screen p-8 fixed w-[15.5rem] 2xl:w-[17.5rem] animation-element animation-element-slow fadeLeft">
+                    <!-- Logo -->
+                    <div class="logo-section">
+                        <img src="assets/images/logo.svg" alt="Logo" class="h-[2.5rem] mw-[13.75rem] object-contain object-center">
+                    </div>
+            
+                    <!-- Navigation -->
+                    <nav class="mt-12 navigation-section">
+                        <!-- Dashboard -->
+                        <a href="index.html" class="active flex items-center py-3.5 text-base 2xl:text-xl">
+                            <i class="text-xl 2xl:text-2xl pr-2.5 2xl:pr-4 li-dashboard-icon"></i> Dashboard
+                        </a>
+                        <!-- Agencies -->
+                        <a href="agencies.html" class="flex items-center py-3.5 text-base 2xl:text-xl">
+                            <i class="text-xl 2xl:text-2xl pr-2.5 2xl:pr-4 li-agencies-icon"></i> Agencies
+                        </a>
+                        <!-- Division -->
+                        <a href="#" class="flex items-center py-3.5 text-base 2xl:text-xl">
+                            <i class="text-xl 2xl:text-2xl pr-2.5 2xl:pr-4 li-division-icon"></i> Division
+                        </a>
+                        <!-- Location -->
+                        <a href="#" class="flex items-center py-3.5 text-base 2xl:text-xl">
+                            <i class="text-xl 2xl:text-2xl pr-2.5 2xl:pr-4 li-location-icon"></i> Location
+                        </a>
+                        <!-- Users -->
+                        <a href="#" class="flex items-center py-3.5 text-base 2xl:text-xl">
+                            <i class="text-xl 2xl:text-2xl pr-2.5 2xl:pr-4 li-users-icon"></i> Users
+                        </a>
+                      </nav>
+              
+                      <!-- Footer Privacy Section -->
+                      <div class="absolute max-w-[13rem] 2xl:max-w-[14rem] footer-privacy inset-4 2xl:inset-6 bottom-[4.67rem]">
+                          <div class="footer-privacy-inner bg-teal-100 rounded-md text-center p-4">
+                              <img class="flex mx-auto bg-white rounded-full p-4" src="assets/images/security-icon.svg" alt="Security Safe">
+                              <p class="text-white text-xl keep-text pt-2">Keep you safe!</p>
+                              <p class="safety-des text-xs pt-4">Update your security password, keep your account safe!</p>
+                              <button class="mt-4 text-white mb-3">Update Privacy</button>
+                          </div>
+                      </div>
+                </aside>
+            </div>
+
+          <main class="min-h-screen p-5 xl:p-7 2xl:p-8 w-full dashboard-right-section pl-5 xl:pl-[3.625rem] ml-0 flex flex-col lg:ml-16 xl:ml-[1.5rem] 2xl:ml-[4.625rem]">
+            <!-- Main Header Section -->
+            <div class="flex justify-between items-center flex-wrap xl:flex-nowrap animation-element animation-element-slow fadeDown">
+                <div class="dashboard-header lg:flex hidden flex-col">
+                    <h1 class="text-2xl 2xl:text-3xl font-semibold">Agencies</h1>
+                    <div class="breadcrum mt-1">
+                      <ul class="flex"> 
+                          <li class="text-md 2xl:text-xl prev-page"><a href="#"> Agencies </a></li>
+                          <li class="text-md 2xl:text-xl px-1.5 2xl:px-2 breakpoint"> <i class="li-arrow-down"> </i> </li>
+                          <li class="text-md 2xl:text-xl"> Add Agency </li>
+                      </ul>
+                    </div>
+                </div>
+  
+                <div class="lg:hidden flex justify-between w-full ">
+                  <div class="flex flex-col">
+                    <h1 class="text-xl xl:text-3xl tracking-wide text-dark font-gilroy">Dashboard</h1>
+                    <time datetime="2022-01-19T16:45" class="mt-1 xl:mt-1.5 text-sm xl:text-lg tracking-tight text-textLight">4.45 pm 19 Jan 2022</time>
+                  </div>
+  
+                <div class="flex items-center">
+                  <div id="menu-icon" class="hamburger">
+                    <div id="hamburger-icon" class="hamburger-lines flex flex-col gap-1.5 w-[20px] cursor-pointer">
+                        <div class="line w-full bg-darker rounded-sm h-0.5"></div>
+                        <div class="line w-full bg-darker rounded-sm h-0.5"></div>
+                        <div class="line w-full bg-darker rounded-sm h-0.5"></div>
+                    </div>                  
+                 </div>
+                  
+                  <nav id="mobile-menu" class="mobile-menu hidden fixed w-full h-screen z-[99] top-0 left-0 bg-darker text-white text-center py-14 transition -translate-y-full">
+                    <div id="close-icon" class="close hidden absolute right-5 top-5 text-white text-xl">&#10005; </div>
+                      <ul class="list-none p-0">
+                          <li class="mx-0 my-5"> <a href="index.html"><img src="assets/images/logo.svg" alt="Logo" class="object-contain self-center max-w-full aspect-[5.65] w-[220px] invert brightness-0	mx-auto"> </a> </li>
+                          <li class="mx-0 my-5"><a class="text-white text-lg no-underline	" href="index.html">Dashboard</a></li>
+                          <li class="mx-0 my-5"><a class="text-white text-lg no-underline	" href="agencies.html">Agencies</a></li>
+                          <li class="mx-0 my-5"><a class="text-white text-lg no-underline	" href="#">Division</a></li>
+                          <li class="mx-0 my-5"><a class="text-white text-lg no-underline	" href="#">Location</a></li>
+                          <li class="mx-0 my-5"><a class="text-white text-lg no-underline	" href="#">Users</a></li>
+                      </ul>
+                  </nav>
+                </div>
+  
+                </div>
+                
+                <div class="flex items-center gap-2 sm:gap-6 mt-5 xl:mt-0 xl:gap-4 header-right-section w-full xl:w-auto flex-wrap sm:flex-nowrap">
+                    <!-- Search Bar -->
+                    <div class="relative search-bar">
+                        <input type="text" placeholder="Search" class="text-sm pr-4 py-4 xl:py-5 border-0 rounded-xl focus:outline-none pl-16">
+                        <span class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+                            <img src="assets/images/search-icon.svg">
+                        </span>
+                    </div>
+                    <!-- Notification Dropdown -->
+                    <div class="relative sm:ml-auto xl:ml-0">
+                        <button id="notification-btn" class="notification-btn p-3 2xl:p-2 rounded-md bg-white relative">
+                            <img class="w-6 2xl:w-8 h-6 2xl:h-8" src="assets/images/notification-icon.svg" alt="Notification">
+                            <span class="absolute top-2.5 right-2.5 2xl:top-3.5 2xl:right-3.5 text-white text-xs w-3.5 2xl:w-4 h-3.5 2xl:h-4 flex items-center justify-center rounded-full">3</span>
+                        </button>
+                        <div id="notification-dropdown" class="hidden absolute right-0 mt-2 w-64 bg-white shadow-lg rounded-lg z-10">
+                            <ul class="p-4 space-y-2">
+                                <li class="text-sm">New message received</li>
+                                <li class="text-sm">Server update available</li>
+                                <li class="text-sm">Scheduled maintenance at 10 PM</li>
+                            </ul>
+                        </div>
+                    </div>
+  
+                    <!-- Admin Profile Dropdown -->
+                    <div class="relative ml-auto xl:ml-0">
+                        <button id="profile-btn" class="flex items-center gap-1 2xl:gap-2 focus:outline-none">
+                            <span class="text-sm sm:text-base xl:text-md 2xl:text-xl font-bold">Admin</span>
+                            <!-- <img src="<?php echo get_avatar_url(get_current_user_id()); ?>" alt="Admin Avatar" class="w-8 h-8 rounded-full"> -->
+                            <!--Currently I m comment dynamic code due to match with design kindly consider it-->
+                            <img src="assets/images/admin.png" alt="User image" class="w-10 xl:w-14 2xl:w-16 h-10 xl:h-14 2xl:h-16 object-cover object-center ml-1.5 2xl:ml-4">
+                        </button>
+                        <div id="profile-dropdown" class="hidden absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg z-10">
+                            <ul class="p-4 space-y-2">
+                                <li><a href="#" class="block text-sm text-gray-700">Profile</a></li>
+                                <li><a href="#" class="block text-sm text-gray-700">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Basic detail section-->
+            <div class="basic-information mt-[1rem] sm:mt-[2rem] 2xl:mt-[2.19rem] bg-white rounded-xl px-4 py-4 2xl:px-6 2xl:py-8 animation-element animation-element-slow fadeUp">
+                <!-- Form -->
+                    <form class="form">
+                        <h2 class="mb-8"> Basic Agency Details </h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-6 mb-6">
+                        <div>
+                            <label>Agency Name <span class="text-red-500">*</span></label>
+                            <input
+                            type="text"
+                            class="border border-gray-300 rounded-md w-full py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            />
+                        </div>
+                        <div>
+                            <label>Phone</label>
+                            <input
+                            type="text"
+                            class="border border-gray-300 rounded-md w-full py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            />
+                        </div>
+                        <div>
+                            <label>Email <span class="text-red-500">*</span></label>
+                            <input
+                            type="email"
+                            class="border border-gray-300 rounded-md w-full py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            />
+                        </div>
+                        <div>
+                            <label>Contact Person</label>
+                            <input
+                            type="text"
+                            class="border border-gray-300 rounded-md w-full py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            />
+                        </div>
+                        <div>
+                            <label>Username<span class="text-red-500">*</span></label>
+                            <input
+                            type="text"
+                            class="border border-gray-300 rounded-md w-full py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            />
+                        </div>
+                        <div>
+                            <label>Password <span class="text-red-500">*</span></label>
+                            <input
+                            type="password"
+                            class="border border-gray-300 rounded-md w-full py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            />
+                        </div>
+                        </div>
+                    </form>
+  
+            </div>
+
+            <!--Other detail section-->
+            <div class="basic-information mt-[2rem] 2xl:mt-[2.19rem] bg-white rounded-xl px-4 py-4 2xl:px-6 2xl:py-8 animation-element animation-element-exslow fadeUp">
+                <!-- Tabs -->
+                <div class="tabs mb-8">
+                    <ul class="flex">
+                    <li class="mr-6">
+                        <button
+                        id="tab1"
+                        class="active tab-button text-sm sm:text-base 2xl:text-lg font-medium"
+                        onclick="showTab(1)"
+                        >
+                        Other Details
+                        </button>
+                    </li>
+                    <li class="mr-6">
+                        <button
+                        id="tab2"
+                        class="tab-button text-sm sm:text-base 2xl:text-lg font-medium"
+                        onclick="showTab(2)"
+                        >
+                        Address
+                        </button>
+                    </li>
+                    <li>
+                        <button
+                        id="tab3"
+                        class="tab-button text-sm sm:text-base 2xl:text-lg font-medium"
+                        onclick="showTab(3)"
+                        >
+                        Location
+                        </button>
+                    </li>
+                    </ul>
+                </div>
+            
+                <!-- Tab Content -->
+                <div id="content1" class="tab-content">
+                    <!-- Form Section -->
+                    <form class="form">
+                    <div class="grid grid-cols-1 gap-6 mb-6 w-full sm:w-3/5">
+                        <div>
+                        <label>Token <span class="text-red-500">*</span></label>
+                        <input
+                            type="text"
+                            class="border border-gray-300 rounded-md w-full py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        />
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 gap-6 mb-6 w-full sm:w-3/5">
+                        <div>
+                        <label>API Key <span class="text-red-500">*</span></label>
+                        <input
+                            type="text"
+                            class="border border-gray-300 rounded-md w-full py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        />
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 gap-6 mb-6 w-full sm:w-3/5">
+                        <div class="col-span-2">
+                        <label>Notes</label>
+                        <textarea
+                            class="border border-gray-300 rounded-md w-full py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            rows="3"
+                        ></textarea>
+                        </div>
+                    </div>
+            
+                    <!-- Custom Checkboxes -->
+                    <div class="flex items-center space-x-6 mb-6 checkboxes">
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                        <input
+                            type="checkbox"
+                            class="peer hidden"
+                        />
+                        <div
+                            class="w-5 h-5 border-2 border-gray-400 rounded-md flex items-center justify-center peer-checked:bg-blue-500 peer-checked:border-blue-500"
+                        >
+                            <svg
+                            class="w-4 h-4 text-white hidden peer-checked:block"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            >
+                            <path d="M20 6L9 17l-5-5"></path>
+                            </svg>
+                        </div>
+                        <span class="text-gray-700">Allow API</span>
+                        </label>
+            
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                        <input
+                            type="checkbox"
+                            class="peer hidden"
+                        />
+                        <div
+                            class="w-5 h-5 border-2 border-gray-400 rounded-md flex items-center justify-center peer-checked:bg-blue-500 peer-checked:border-blue-500"
+                        >
+                            <svg
+                            class="w-4 h-4 text-white hidden peer-checked:block"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            >
+                            <path d="M20 6L9 17l-5-5"></path>
+                            </svg>
+                        </div>
+                        <span class="text-gray-700">Active</span>
+                        </label>
+                    </div>
+                    </form>
+                </div>
+            
+                <!-- Additional Tabs -->
+                <div id="content2" class="tab-content hidden">
+                    <p class="text-gray-700">Address details go here.</p>
+                </div>
+                <div id="content3" class="tab-content hidden">
+                    <p class="text-gray-700">Location details go here.</p>
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex xl:mt-[2rem] 2xl:mt-[2.18rem] gap-5 animation-element animation-element-exslow fadeUp flex-wrap sm:flex-nowrap mt-5 sm:mt-0">
+                <button
+                type="reset"
+                class="o-button-sky"
+                >
+                Reset
+                </button>
+                <button
+                    type="button"
+                    class="o-button-border"
+                >
+                    Previous
+                </button>
+                <button
+                    type="submit"
+                    class="o-button-blue"
+                >
+                    Next
+                </button>
+            </div>
+
+          </main>
+        </div>
+      </section>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="assets/js/custom.js"></script> 
+</body>
+</html>

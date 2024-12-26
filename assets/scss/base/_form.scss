@@ -1,0 +1,58 @@
+.form {
+    h2 {
+        font-size: 22px;
+        line-height: 26px;
+        color: #2C4364;
+        font-family: family(secondary);
+        font-weight: 500;
+
+        @include media-down(laptop-large) {
+            font-size: 18px;
+            line-height: 22px;
+        }
+
+        @include media-down(mobile) {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+
+    label {
+        color: #263238;
+        font-family: family(secondary);
+        background-color: #F8F8F8;
+        padding: 2px 8px;
+        position: relative;
+        z-index: 1;
+        margin-left: 12px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+
+        @include media-down(laptop-large) {
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+
+    input, textarea {
+        border: 1px solid #929BA7;
+        color: $interface-black-light;
+        padding: 18px 12px 12px 12px;
+        margin-top: -14px;
+        font-size: 14px;
+        line-height: 18px;
+
+        @include media-down(laptop-large) {
+            margin-top: -10px;
+        }
+    }
+
+    .checkboxes {
+        label {
+            background-color: transparent;
+            margin-left: 0;
+        }
+        
+    }
+}

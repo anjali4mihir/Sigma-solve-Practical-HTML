@@ -1,0 +1,31 @@
+.breadcrum {
+    ul li {
+        font-family: family(secondary);
+        color: $interface-dark-gray;
+
+        &.breakpoint {
+            transform: rotate(-90deg);
+        }
+
+        &.prev-page {
+            color: #2C4364;
+        }
+    }
+}
+.basic-information {
+    border: 1.18px solid #0000001A; 
+
+    .tabs {
+        .tab-button {
+            color: rgba(44, 67, 100, 0.5);
+            font-family: family(secondary);
+            transition: 0.5s all ease-out;
+
+            &.active, &:hover {
+                color: rgba(44, 67, 100, 1);
+                border-bottom: 2px solid #002337;
+            }
+        }
+       
+    }
+}

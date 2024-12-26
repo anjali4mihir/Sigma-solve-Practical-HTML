@@ -1,0 +1,14 @@
+@import 'abstracts/layout';
+@import 'abstracts/index';
+
+// Settings:
+@import 'base/colors';
+@import 'base/fonts';
+@import 'base/type';
+@import 'base/animation';
+@import 'base/form';
+
+// components:
+@import 'components/sidebar';
+@import 'components/dashboard-right';
+@import 'components/agencies';
